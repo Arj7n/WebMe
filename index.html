@@ -5,7 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>My First Page</title>
     <link href="https://fonts.googleapis.com/css2?family=Permanent+Marker&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="./node_modules/bootstrap/dist/css/bootstrap.min.css">
+    <!-- Bootstrap CSS CDN -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3pVYMJ2fG4LskXBy6MoRnABhX8J72NXn2A7QQsGgTHlB9/44Gf5e2PGXxP" crossorigin="anonymous">
     <style>
         /* Custom styles */
         .btn-custom {
@@ -18,49 +19,54 @@
             transition: background-color 0.2s, color 0.2s;
         }
 
-        /* Adjustments for the image and toolbar placement */
+            .btn-custom:hover, .btn-custom:focus {
+                background-color: black;
+                color: white;
+            }
+
+            .btn-custom:active {
+                background-color: #555;
+                color: white;
+                /* Optional: scale the button down a bit */
+                transform: scale(0.98);
+            }
+
+        /* Centered container for image and toolbar */
         .centered-container {
-            padding-top: 1rem; /* Add a bit of padding at the top */
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            min-height: 100vh;
         }
 
-        /* Ensure the toolbar sticks to the image if the page height is less than viewport height */
+        /* Centered toolbar under the image */
         .toolbar {
-            margin-top: -1rem; /* Negative margin to reduce gap */
+            display: flex;
+            justify-content: center; /* This will center the toolbar buttons */
+            width: 100%;
         }
-
-        .btn-custom:hover, .btn-custom:focus {
-            background-color: black;
-            color: white;
-        }
-
-        .btn-custom:active {
-            background-color: #555;
-            color: white;
-            /* Optional: scale the button down a bit */
-            transform: scale(0.98);
-        }
-
     </style>
 </head>
-<body class="d-flex flex-column align-items-center justify-content-center vh-100">
+<body>
 
-    <!-- Centered image -->
     <div class="centered-container">
-        <img src="assets\mainpage_hello.png" alt="Hello" class="img-fluid"> <!-- 'img-fluid' class makes the image responsive -->
+        <!-- Centered image -->
+        <img src="assets/mainpage_hello.png" alt="Hello" class="img-fluid"> <!-- 'img-fluid' class makes the image responsive -->
+        <!-- Centered Toolbar with buttons -->
+        <div class="toolbar">
+            <button type="button" class="btn btn-custom mx-2" onclick="window.location.href='Me.html'">ME</button>
+            <button type="button" class="btn btn-custom mx-2" onclick="window.location.href='Blog.html'">Blog</button>
+            <button type="button" class="btn btn-custom mx-2" onclick="window.location.href='Pictures.html'">Pictures</button>
+            <button type="button" class="btn btn-custom mx-2" onclick="window.location.href='Resume.html'">ResuME</button>
+        </div>
     </div>
 
-    <!-- Toolbar with buttons -->
-    <!-- Toolbar with buttons -->
-    <div class="d-flex justify-content-center w-100 toolbar">
-        <button type="button" class="btn btn-custom mx-2" onclick="window.location.href='Me.html'"='#Me'">ME</button>
-        <button type="button" class="btn btn-custom mx-2" onclick="window.location.href='Blog.html'">Blog</button>
-        <button type="button" class="btn btn-custom mx-2" onclick="window.location.href='Pictures.html'">Pictures</button>
-        <button type="button" class="btn btn-custom mx-2" onclick="window.location.href='Resume.html'">ResuME</button>
-    </div>
-
-
-    <script src="./node_modules/jquery/dist/jquery.slim.min.js"></script>
-    <script src="./node_modules/popper.js/dist/umd/popper.min.js"></script>
-    <script src="./node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+    <!-- Optional JavaScript -->
+    <!-- jQuery and Bootstrap Bundle (includes Popper) CDN -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.bundle.min.js" integrity="sha384-Ltrj/5jWfRRd8JnNLtO9eBirw5rF3QzGvmPnMnHfZGh3BwZjyIqMT3xR60+3C7K4" crossorigin="anonymous"></script>
 </body>
 </html>
+
+

@@ -4,7 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Blog</title>
-    <link rel="stylesheet" href="./node_modules/bootstrap/dist/css/bootstrap.min.css">
+    <!-- Bootstrap CSS CDN -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3pVYMJ2fG4LskXBy6MoRnABhX8J72NXn2A7QQsGgTHlB9/44Gf5e2PGXxP" crossorigin="anonymous">
     <style>
         .btn-custom {
             background-color: transparent;
@@ -13,6 +14,11 @@
             font-family: 'Permanent Marker', cursive;
             font-size: 0.8rem;
             padding: .35rem 1rem;
+        }
+
+        .btn-custom:hover, .btn-custom:focus {
+            background-color: black;
+            color: white;
         }
 
         .smaller-image {
@@ -37,13 +43,11 @@
 </head>
 <body>
 
-
     <div class="row">
         <div class="col-12 text-left">
-            <img src="assets\Blog.png" alt="Blog Image" class="smaller-image">
+            <img src="assets/Blog.png" alt="Blog Image" class="smaller-image">
         </div>
     </div>
-
 
     <div class="row mt-2">
         <div class="col-12">
@@ -53,33 +57,37 @@
             <button class="btn btn-custom mx-2" onclick="window.location.href='Resume.html'">Resume</button>
         </div>
     </div>
-    </div>
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery and Bootstrap Bundle (includes Popper) CDN -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.bundle.min.js" integrity="sha384-Ltrj/5jWfRRd8JnNLtO9eBirw5rF3QzGvmPnMnHfZGh3BwZjyIqMT3xR60+3C7K4" crossorigin="anonymous"></script>
+
     <!--
-     <div class="container mt-4">
+    <div class="container mt-4">
 
-         <div class="blog-post">
-             <h2>Blog Post Title</h2>
-             <h4 class="text-muted">Posted on January 1, 2024</h4>
-             <p>This is the body of the first blog post...</p>
-             <div class="text-center">
-                 <img src="path_to_image.jpg" alt="Descriptive Alt Text" class="img-fluid">
-             </div>
-             <p>More content...</p>
-         </div>
-
-
-         <div class="blog-post">
-             <h2>Second Blog Post Title</h2>
-             <h4 class="text-muted">Posted on January 2, 2024</h4>
-             <p>This is the body of the second blog post...</p>
-
-         </div>
+        <div class="blog-post">
+            <h2>Blog Post Title</h2>
+            <h4 class="text-muted">Posted on January 1, 2024</h4>
+            <p>This is the body of the first blog post...</p>
+            <div class="text-center">
+                <img src="path_to_image.jpg" alt="Descriptive Alt Text" class="img-fluid">
+            </div>
+            <p>More content...</p>
+        </div>
 
 
-     </div>
-     -->
-    <script src="./node_modules/jquery/dist/jquery.slim.min.js"></script>
-    <script src="./node_modules/popper.js/dist/umd/popper.min.js"></script>
-    <script src="./node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+        <div class="blog-post">
+            <h2>Second Blog Post Title</h2>
+            <h4 class="text-muted">Posted on January 2, 2024</h4>
+            <p>This is the body of the second blog post...</p>
+
+        </div>
+
+
+    </div>
+    -->
+
+
 </body>
 </html>
