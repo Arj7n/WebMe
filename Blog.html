@@ -11,7 +11,7 @@
             color: black;
             border: 0.5px solid black;
             font-family: 'Permanent Marker', cursive;
-            font-size: 0.6rem;
+            font-size: 0.8rem;
             padding: .35rem 1rem;
         }
 
@@ -19,29 +19,65 @@
             width: 25%; /* Reducing image size */
             height: auto; /* Maintain aspect ratio */
         }
+
+        .blog-post {
+            border-top: 1px solid #ddd; /* Top border */
+            border-bottom: 1px solid #ddd; /* Bottom border */
+            padding-top: 20px; /* Space above the post */
+            padding-bottom: 20px; /* Space below the post */
+            margin-top: 50px; /* Space between posts */
+            margin-bottom: 20px;
+        }
+
+            /* First post should not have a top border */
+            .blog-post:first-child {
+                border-top: none;
+            }
     </style>
 </head>
 <body>
 
-    <div class="container mt-4">
-        <!-- Image aligned to the top left -->
-        <div class="row">
-            <div class="col-12 text-left">
-                <img src="assets\Blog.png" alt="Blog Image" class="smaller-image">
-            </div>
-        </div>
 
-        <!-- Navbar with buttons -->
-        <div class="row mt-2">
-            <div class="col-12">
-                <button class="btn btn-custom mx-2" onclick="window.location.href='index.html'">Home</button>
-                <button class="btn btn-custom mx-2" onclick="window.location.href='Me.html'">Me</button>
-                <button class="btn btn-custom mx-2" onclick="window.location.href='Pictures.html'">Pictures</button>
-                <button class="btn btn-custom mx-2" onclick="window.location.href='Resume.html'">Resume</button>
-            </div>
+    <div class="row">
+        <div class="col-12 text-left">
+            <img src="assets\Blog.png" alt="Blog Image" class="smaller-image">
         </div>
     </div>
 
+
+    <div class="row mt-2">
+        <div class="col-12">
+            <button class="btn btn-custom mx-2" onclick="window.location.href='index.html'">Home</button>
+            <button class="btn btn-custom mx-2" onclick="window.location.href='Me.html'">Me</button>
+            <button class="btn btn-custom mx-2" onclick="window.location.href='Pictures.html'">Pictures</button>
+            <button class="btn btn-custom mx-2" onclick="window.location.href='Resume.html'">Resume</button>
+        </div>
+    </div>
+    </div>
+    <!--
+     <div class="container mt-4">
+
+         <div class="blog-post">
+             <h2>Blog Post Title</h2>
+             <h4 class="text-muted">Posted on January 1, 2024</h4>
+             <p>This is the body of the first blog post...</p>
+             <div class="text-center">
+                 <img src="path_to_image.jpg" alt="Descriptive Alt Text" class="img-fluid">
+             </div>
+             <p>More content...</p>
+         </div>
+
+
+         <div class="blog-post">
+             <h2>Second Blog Post Title</h2>
+             <h4 class="text-muted">Posted on January 2, 2024</h4>
+             <p>This is the body of the second blog post...</p>
+
+         </div>
+
+
+     </div>
+     -->
     <script src="./node_modules/jquery/dist/jquery.slim.min.js"></script>
     <script src="./node_modules/popper.js/dist/umd/popper.min.js"></script>
     <script src="./node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
